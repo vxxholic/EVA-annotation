@@ -6,40 +6,16 @@
 更多可选项可以在样式站便捷地找到下拉选项。
 **/
 
-@-moz-document 
-    url-prefix('http://tieba.baidu.com/photo/p') /**看图 **/ {
-            
-    
+@-moz-document url-prefix("http://tieba.baidu.com/photo/p") {
 body ,.af_left,.af_container{
     background: #000 !important;
 }
 .af_head a:hover {
     color: #FFF !important;
-} 
-        
-        
-        }
+}
+}
 
-@-moz-document 
-    url-prefix('http://tieba.baidu.com/f'), 
-    url-prefix('http://tieba.baidu.com/i/'), 
-    url-prefix('http://tieba.baidu.com/p/'), 
-    url-prefix('http://tieba.baidu.com/'),
-    url-prefix('http://xingqu.baidu.com/f'), 
-    url-prefix('http://xingqu.baidu.com/i/'), 
-    url-prefix('http://xingqu.baidu.com/p/'), 
-    url-prefix('http://xingqu.baidu.com/'), 
-    url-prefix('http://v.tieba.com/'), 
-    url-prefix('http://v.tieba.com/f'), 
-    url-prefix('http://v.tieba.com/i/'), 
-    url-prefix('http://v.tieba.com/p/'), 
-    url-prefix('http://v.tieba.baidu.com/'), 
-    url-prefix('http://v.tieba.baidu.com/f'), 
-    url-prefix('http://v.tieba.baidu.com/i/'), 
-    url-prefix('http://v.tieba.baidu.com/p/')
-    {
-
-                
+@-moz-document url-prefix("http://tieba.baidu.com/f"), url-prefix("http://tieba.baidu.com/i/"), url-prefix("http://tieba.baidu.com/p/"), url-prefix("http://tieba.baidu.com/"), url-prefix("http://xingqu.baidu.com/f"), url-prefix("http://xingqu.baidu.com/i/"), url-prefix("http://xingqu.baidu.com/p/"), url-prefix("http://xingqu.baidu.com/"), url-prefix("http://v.tieba.com/"), url-prefix("http://v.tieba.com/f"), url-prefix("http://v.tieba.com/i/"), url-prefix("http://v.tieba.com/p/"), url-prefix("http://v.tieba.baidu.com/"), url-prefix("http://v.tieba.baidu.com/f"), url-prefix("http://v.tieba.baidu.com/i/"), url-prefix("http://v.tieba.baidu.com/p/") {
 /*楼主标识*/
         .louzhubiaoshi ,
 .louzhubiaoshi_wrap .beMember_fl {
@@ -353,7 +329,30 @@ body ,.af_left,.af_container{
 
         
 /* 去掉页首翻页 开始*/   
-   
+.thread_theme_5,#thread_theme_5   .l_thread_info .l_posts_num li:nth-child(3),#thread_theme_5   .l_thread_info .l_posts_num li:nth-child(1), .thread_theme_5 .tofrs_up    { 
+ display: none !important;
+}     
+
+#thread_theme_5 ,.thread_theme_5 {
+
+    border-bottom: 1px solid #ABA17D;
+    padding-bottom: 1px;
+}
+.nav_wrap_add_border .nav_list{
+    border-bottom: 1px solid #ABA17D !important;
+    height: 43px;
+}
+#pb_content>.left_section>.core_title_wrap_bright{
+    margin-top: -45px;
+}
+
+.tbui_follow_fixed .core_title_theme_bright .core_title_btns{
+    visibility: visible;
+    margin-top:55px;
+} 
+
+  
+       /* Jan 18th*/  
         
 
 /*
@@ -388,7 +387,44 @@ body ,.af_left,.af_container{
         
 /*过渡效果*/
        
-        
+    .forum_header .nav_list>li:nth-child(1)  .space,.star_class_nav>li:nth-child(1) .space, .card_top_theme2+.nav_wrap .nav_list>li:nth-child(1) .space  {
+     height: 0px;
+     transition: height 0.5s ease-in-out;
+    background-color: lightcoral;
+}        
+.forum_header .nav_list>li:nth-child(2)  .space,.star_class_nav>li:nth-child(2) .space, .card_top_theme2+.nav_wrap .nav_list>li:nth-child(2) .space {
+     height: 0px;
+     transition: height 0.5s  ease-in-out;
+     background-color: lightsalmon;
+}        
+.forum_header .nav_list>li:nth-child(3) .space ,.star_class_nav>li:nth-child(3) .space, .card_top_theme2+.nav_wrap .nav_list>li:nth-child(3) .space {
+     height: 0px;
+     transition: height 0.5s  ease-in-out;
+    background-color: lightgreen;
+}        
+.forum_header .nav_list>li:nth-child(4)  .space,.star_class_nav>li:nth-child(4) .space{
+     height: 0px;
+     transition: height 0.5s  ease-in-out;
+    background-color: lightpink;
+}        
+.forum_header .nav_list>li:nth-child(5)  .space,.star_class_nav>li:nth-child(5) .space{
+     height: 0px;
+     transition: height 0.5s  ease-in-out;
+    background-color: lightskyblue;
+}        
+.forum_header .nav_list>li:nth-child(6) .space ,.star_class_nav>li:nth-child(6) .space {
+     height: 0px;
+     transition: height 0.5s  ease-in-out;
+     background-color: lightgrey;
+}
+.forum_header .nav_list>li  .space:hover ,.star_class_nav>li  .space:hover {
+   height:46px; 
+}   
+ 
+ 
+.card_top_theme2+.nav_wrap .nav_list li .space:hover   {
+    height:44px;
+}   
 /*
 .forum_header .nav_list>li:nth-child(1)  .space,.star_class_nav>li:nth-child(1) .space, .card_top_theme2+.nav_wrap .nav_list>li:nth-child(1) .space  {
      height: 0px;
@@ -436,8 +472,8 @@ body ,.af_left,.af_container{
     
     
 body,.plat_skin {
-    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI"; /**我是字体 **/
-        background: #E8E8E8 repeat fixed !important; /**我是背景图 **/
+      /**我是字体 **/
+    background:url(http://ww2.sinaimg.cn/large/6ea63d87gw1erol597c5ej20bg0bg3yg.jpg)  fixed   repeat !important; /**我是背景图 **/
      /**我是背 景图 **/
 
    /**  http://ww2.sinaimg.cn/large/6ea63d87gw1ewqlj059xgj219s0wdk10.jpg **/
@@ -611,17 +647,17 @@ a,a:hover, a:link,.new_list .title, .n_name ,.new_list a,.user_profile a,.u_ddl_
 
   /*下浮动*/
 .wrap2>#container ,.page-container .content-sec ,#main_wrapper #main_header_logo,.content_top+.content {
-    margin-top: 130px !important;
+    margin-top: 47px !important;
 }
 /*正特定的吧首页上边距；*/
 .top_iframe {
-    margin-top: 130px;
+    margin-top: 47px;
 }
 
 
-div+.pop-up-frame   ,[type="text/javascript"]+.pop-up-frame {/**更多**/
+div+.pop-up-frame  ,[type="text/javascript"]+.pop-up-frame  {/**更多**/
 
-    top: 628px!important;
+    top: 545px!important;
 }
 
  /*背景白*/
@@ -672,7 +708,7 @@ div+.pop-up-frame   ,[type="text/javascript"]+.pop-up-frame {/**更多**/
     top: 9px;
     right: 10px;
     font-size: 15px;
-    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI";
+     
     z-index: 60011 !important;
 }
 #com_userbar ul {
@@ -1305,7 +1341,7 @@ div+.pop-up-frame  ,[type="text/javascript"]+.pop-up-frame  {/**更多**/
     background-color: rgba(255,255,255,0);
     border-right: 1px solid #ABA17D ; 
     border-bottom: 1px dotted #ABA17D ; 
-       /**去置顶直播  **/
+    display: none  !important;  /**去置顶直播  **/
 }
 [title="贴吧实名认证"] {
     display: none;
@@ -1337,7 +1373,7 @@ div+.pop-up-frame  ,[type="text/javascript"]+.pop-up-frame  {/**更多**/
 }      
 .threadlist_bright li.thread_top_list_folder, .threadlist_bright li.thread_top_list_folder:hover  {
     background-color: rgba(255,255,255,0) ;
-       /**去置顶精品  **/
+    display: none  !important;  /**去置顶精品  **/
 }   
 .thread_topic_bright .topic_thread_wrapper {
     border: 1px solid #ABA17D ; 
@@ -1940,7 +1976,7 @@ a.starchannel_entrance, a.starchannel_entrance:hover, a.starchannel_entrance:vis
 }    **/
 .ihome_nav_list .tbnav_tab_inner .space a {
     margin-left: -20px;  
-        font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI"; /**我是字体 **/
+          /**我是字体 **/
     color: #4B4632  ;
     
 }
@@ -2180,7 +2216,7 @@ a.starchannel_entrance, a.starchannel_entrance:hover, a.starchannel_entrance:vis
     margin-right: 10px;
     font-size: 14px;
     text-transform:capitalize;
-    font-family: "微软雅黑","Microsoft YaHei","Microsoft YaHei UI"; /**我是字体 **/
+      /**我是字体 **/
 
 }
 .ihome_forum_group  #forum_group_wrap  .more , .ihome_forum_group  #forum_group_wrap .more-hover {
@@ -2336,7 +2372,9 @@ a.starchannel_entrance, a.starchannel_entrance:hover, a.starchannel_entrance:vis
     display: none !important;
 } 
         
-         
+.d_sign_split,.j_user_sign   {
+    display: none !important;
+}         
 /*屏蔽签名档*/
 
 
@@ -2442,6 +2480,77 @@ span.edit_font_color strong,.d_post_content  strong {
         
          
  /*屏蔽吧首页 banner 可选项*/
+  /*屏蔽吧首页 banner 可选项  缩小*/
+ .star_head .star_banner ,.forum_header .card_banner, .forum_header  .plat_head .plat_banner,.platform_time_axis_container{
+    display: none !important;
+}
+.card_top_theme1 .card_head, .card_top_theme1 .card_head_img,.plat_picbox ,.plat_picbox img {
+    width: 50px;
+    height: 50px;
+}  
+        
+        
+.card_top_theme1 .card_top {
+    padding-left: 100px;
+}        
+#star_title {
+        margin: 0px 0px;
+}     
+.star_picbox,.star_picbox img {
+    width: 60px;
+    height: 60px;
+}     
+.star_header_left {
+    height: inherit;
+}
+.forum_header .card_slogan ,.forum_header .card_info {
+    display: none !important;
+}
+  .card_top_theme1 .card_title   {
+    margin-top: 15px;
+}        
+        
+  .card_top_theme1 .card_title  .card_title_fname   {
+    margin-right: 15px;
+}        
+.star_info {
+    margin: 15px 15px 0px 20px;
+}     
+.star_info+.fans_numbox  {
+    margin-top: 20px;
+}   
+ .plat_picbox      {
+    margin: 0px 10px 0px 10px;
+}    
+  /*精简*/
+  
+#pagelet_frs-header\/pagelet\/head .card_banner,#pagelet_frs-header\/pagelet\/head .card_slogan ,#pagelet_frs-header\/pagelet\/head .card_info
+  
+  {
+    display:none !important;
+  }  
+#pagelet_frs-header\/pagelet\/head .card_top_theme .card_head,#pagelet_frs-header\/pagelet\/head  .card_top_theme .card_head_img {
+    width: 50px;
+    height: 50px;
+}
+#pagelet_frs-header\/pagelet\/head  .card_top_theme .card_top {
+  margin-top: 50px;
+}
+  
+  
+#pagelet_frs-header\/pagelet\/head   .head_content{
+  border-color: #ABA17D ; 
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  background:rgba(255,255,255,.5);
+}
+  
+#pagelet_frs-header\/pagelet\/head .card_top_theme .card_head{
+  border-color: #ABA17D ; 
+}
+#pagelet_frs-header\/pagelet\/head .card_top_theme .card_title {
+    margin: 15px -100px;
+}
    
 
 
@@ -2458,6 +2567,18 @@ span.edit_font_color strong,.d_post_content  strong {
         /**border-color 颜色修正  */
    
         /**导航栏去掉  */
+     
+     .card_top_theme1,.star_head,.plat_head {
+    border-top: 0px solid #ABA17D;
+    border-bottom:  1px solid #ABA17D!important;
+}  
+  
+#tb_nav
+    
+
+{
+    display: none !important;
+}
    
 
        
@@ -2514,15 +2635,9 @@ span.edit_font_color strong,.d_post_content  strong {
  /*搜索框*/   
 
  /*搜索框*/   
-.search_main_wrap,.search_form,.search_form form,search_main ,suggestion_list,#tb_header_search_form, .j_search_form {
-    position: relative !important;
-    width: auto!important;
-    margin-bottom: -45px;
-}
-
-
-#com_userbar ,.search_main_fixed,.suggestion{
-    position: absolute;
+.search_main_wrap,.search_form,.search_form form,search_main ,.suggestion ,suggestion_list,#tb_header_search_form, .j_search_form,
+#com_userbar {
+    position: fixed !important;
 }    
      
 
@@ -2712,13 +2827,11 @@ div+ul.tbui_aside_float_bar a{
 
 .tbui_aside_float_bar .tbui_fbar_favor {
     display:  none !important;
-}     
-       
-
-
-         
 }
-@-moz-document domain("www.baidu.com") {/**首页*/
+}
+
+@-moz-document domain("www.baidu.com") {
+/**首页*/
 
     
  a,a:hover,.user-name,.setting-text {
@@ -2765,53 +2878,15 @@ a,a:hover,.user-name {
   color: #FFF !important;
   margin-left: -45px;
   }
-        */ 
-
-
-.s-tips-topMenu,.red-dot,#u_sp>.s-icons>a:nth-child(1) ,#u_sp>.s-icons>a:nth-child(2) ,#u_sp>.s-icons>a:nth-child(3) ,#u_sp .s-set-page, #s_user_name_menu>div>a:nth-child(4),#s_user_name_menu>div>a:nth-child(5),.s-skin-hasbg #u_sp .s-icons .s-icon-msg,#bottom_container,
-    
-.pRETnj,#ec_im_container,.hint_right_middle,
-   	a[href^="//e.baidu.com/"], a[href^="//e.baidu.com/"]+div,a[href^="//e.baidu.com/"]+[style],.shouji
-
-{
-    display: none !important;
-}
-  
-  
-a,a:hover,.user-name {
-    text-decoration: none !important;
-}
-  
-#nv>a:last-child
- {
-    color: rgba(255, 255, 255, 0) !important;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-
-}
-  
-#nv>a:last-child:after
-  {
-  content: "更多";
-  color: #FFF !important;
-  margin-left: -45px;
-  }
-        
-
-
-
+        */
 }
 
-
-
-@-moz-document  url-prefix('http://tieba.baidu.com/pmc') /**吧务中心 **/ {
+@-moz-document url-prefix("http://tieba.baidu.com/pmc") {
 body {
     background:  #FFF;}
-        
- }
+}
 
-@-moz-document  url-prefix('http://tieba.baidu.com/bawu2') /* Jan 18th*/    
- /* 吧务2*/{
+@-moz-document url-prefix("http://tieba.baidu.com/bawu2") {
 body {
     background:  #EFEFEF;
 }
@@ -2822,5 +2897,5 @@ body {
  .container_wrap {
     border: 1px solid #ABA17D ;
     background: url("http://tb2.bdstatic.com/tb/static-bawu/img/forum_info/content_bg_40e9a8b.png") repeat-y scroll 0% 0% transparent;
-} 
- }
+}
+}
